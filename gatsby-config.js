@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `73`,
+    title: `💾 73`,
     description: `A place where even bad ideas are welcome.`,
     // change this to you website url
     siteUrl: `https://juanezm.com/`, 
