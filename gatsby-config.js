@@ -7,16 +7,15 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Delog`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    title: `73`,
+    description: `A place where even bad ideas are welcome.`,
     // change this to you website url
-    siteUrl: `https://delog-w3layouts.netlify.com/`, 
+    siteUrl: `https://juanezm.com/`, 
     home: {
-      title: `Hi! I'm Delog`,
-      description: `I have been specifically designed to become a digital home for designers and developers, help them build amazing professional looking websites with ease. You don't have to worry about nitty gritty of web hosting services to run a blog and yet take full advantage of CMS to manage content :)`,
+      title: `Hi! I'm Juan Emilio Zurita`,
+      description: `Welcome to my personal blog :)`,
     },
-    /* W3Layouts domain verification key for contact forms https://my.w3layouts.com/Forms/ */
-    w3l_dom_key: `5e609f7a2d23fCF_Domain_verify` 
+    w3l_dom_key: `5eadca1465078CF_Domain_verify` 
   },
   plugins: [
     {
@@ -47,16 +46,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // The property ID; the tracking code won't be generated without it. replace with yours
-        trackingId: "UA-164743872-1",
+        trackingId: "UA-38954105-2",
         head: true,
       }
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Delog GatbsyJS Starter`,
-        short_name: `Delog`,
+        name: `Juanezm's Blog`,
+        short_name: `73`,
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `#381696`,
