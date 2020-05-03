@@ -4,6 +4,17 @@ import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import PostLink from "../components/post-link"
 import HeroHeader from "../components/heroHeader"
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+//  fab: which represents all of the brand icons in @fortawesome/free-brands-svg-icons.
+//       So any of the brand icons in that package may be referenced by icon name as a
+//       string anywhere else in our app. For example: "apple", "microsoft", or "google".
+//
+// faCheckSquare and faCoffee: Adding each of these icons individually allows us to refer
+//       to them throughout our app by their icon string names, "check-square" and "coffee", respectively.
+library.add(fab, faCheckSquare, faCoffee)
 
 const IndexPage = ({
   data: {
