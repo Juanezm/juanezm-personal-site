@@ -334,6 +334,7 @@ body.light {
   width: 24px;
   height: 24px;
   margin-left: 20px;
+  cursor: pointer;
 }
 // CSS.gg icons for sun and moon
 .gg-sun {
@@ -358,7 +359,8 @@ body.light {
         no-repeat 14px 5px/6px 2px;
   border-radius: 100px;
   box-shadow: inset 0 0 0 2px;
-  border: 6px solid transparent
+  border: 6px solid transparent;
+  color: #ffcb00
 }
 .gg-sun::after,
 .gg-sun::before {
@@ -371,7 +373,7 @@ body.light {
   border-right: 4px solid;
   border-left: 4px solid;
   left: -6px;
-  top: 5px
+  top: 5px;
 }
 .gg-sun::before {
   transform: rotate(-45deg)
@@ -392,7 +394,8 @@ body.light {
     width: 20px;
     height: 20px;
     border: 2px solid;
-    border-bottom-color: transparent
+    border-bottom-color: transparent;
+    color: #ffcb00;
 }
 .gg-moon::after {
     content: "";
