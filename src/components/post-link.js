@@ -26,3 +26,4 @@ const PostLink = ({ post }) => (
     </article>
 )
 export default PostLink
+q
