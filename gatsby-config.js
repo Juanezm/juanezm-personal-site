@@ -18,11 +18,20 @@ module.exports = {
         w3l_dom_key: `5eadca1465078CF_Domain_verify`,
     },
     plugins: [
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `markdown-pages`,
                 path: `${__dirname}/_data`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `images`,
+                path: `${__dirname}/static/assets`,
             },
         },
         {
