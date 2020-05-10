@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
-import { UseFluidImages } from '../hooks/post-images'
+import { UseFluidImages } from 'fluid-images'
 
 const PostLink = ({ post }) => (
     <article className="card ">
