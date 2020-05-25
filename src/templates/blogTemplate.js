@@ -7,7 +7,7 @@ export default function Template({
     data, // this prop will be injected by the GraphQL query below.
 }) {
     const { markdownRemark } = data // data.markdownRemark holds your post data
-    const { frontmatter, html } = markdownRemark
+    const { timeToRead, frontmatter, html } = markdownRemark
     return (
         <Layout>
             <Helmet>
@@ -19,22 +19,17 @@ export default function Template({
             </Helmet>
             <div className="blog-post-container">
                 <article className="post">
-                    {!frontmatter.thumbnail && (
-                        <div className="post-thumbnail">
-                            <h1 className="post-title">{frontmatter.title}</h1>
-                            <div className="post-meta">{frontmatter.date}</div>
-                        </div>
-                    )}
+                    <h1 className="post-title">{frontmatter.title}</h1>
+                    <div className="post-meta">
+                        {frontmatter.date} · {timeToRead} min read
+                    </div>
                     {!!frontmatter.thumbnail && (
                         <div
                             className="post-thumbnail"
                             style={{
                                 backgroundImage: `url(${frontmatter.thumbnail})`,
                             }}
-                        >
-                            <h1 className="post-title">{frontmatter.title}</h1>
-                            <div className="post-meta">{frontmatter.date}</div>
-                        </div>
+                        ></div>
                     )}
                     <div
                         className="blog-post-content"
@@ -51,12 +46,13 @@ export const pageQuery = graphql`
         markdownRemark(frontmatter: { path: { eq: $path } }) {
             html
             frontmatter {
-                date(formatString: "DD MMMM, YYYY")
+                date(formatString: "Do MMMM YYYY")
                 path
                 title
                 thumbnail
                 metaDescription
             }
+            timeToRead
         }
     }
 `
